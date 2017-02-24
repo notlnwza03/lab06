@@ -11,7 +11,7 @@ function loadjson(){
 			var obj = JSON.parse(xmlhttp.responseText);
 			//alert(obj.books.length);
 			for (i = 0; i < obj.books.length; i++){
-				html += obj.books[i].book.title + "<br>";
+				html += "<h3>"+obj.books[i].book.title+"</h3>" + "<br>";
                 html += obj.books[i].book.publisher +"  "+ obj.books[i].book.author + "<br>";
 				html += "<img src='" + obj.books[i].book.cover + "' height='100'>" +"<br>";	
                 html += obj.books[i].book.blurb + "<br>"+"<hr>";
