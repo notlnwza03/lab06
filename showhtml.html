@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+    <script>
+        function loadXMLDoc() {
+            var html;
+
+
+            if (window.XMLHttpRequest) {
+                html = new XMLHttpRequest();
+;
+
+            } else {
+                html = new ActiveXObject("Microsoft.XMLHTTP");
+
+
+            }
+
+            html.onreadystatechange = function () {
+
+                document.getElementById("myDiv").innerHTML = html.responseText;
+
+            }
+
+            html.open("GET", "http://angsila.cs.buu.ac.th/~wittawas/592/887371/labs/get_html.php", true);
+            html.send();
+          
+            
+        }
+    </script>
+</HEAD>
+
+<BODY>
+    <div id="myDiv">
+        <h2>
+            Let AJAX change this text
+        </h2>
+    </div>
+    <button type="button" onclick="loadXMLDoc()">
+		Change Content
+			
+		</button>
+</BODY>
+
+</HTML>
